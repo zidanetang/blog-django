@@ -25,7 +25,7 @@ SECRET_KEY = 'g6%5on&+*12017-i)be5$dt3v*2$-0l=qlg7ur3!3@!2o24%zo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','blog.secboot.com']
 
 
 # Application definition
