@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h2>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </h2>
+    <p class="lead">
+        类别： <a href="#">{{ post.category }}</a>
+    </p>
+    <p class="lead">
+        作者： <a href="#">{{ post.author }}</a>
+    </p>
+    <p><span class="glyphicon glyphicon-time"></span> 日期：{{ post.created_time }}</p>
+                <!--span class="comments-link"><a href="#">4 评论</a></span-->
+    <p><span class="glyphicon glyphicon-time"></span> 阅读：{{ post.views }}</p>
+    <hr>
+    <p>{{ post.body|safe }}</p>
+    <hr>
+{% endblock main %}
+{% block toc %}
+    {% if toc is not None %}
+    <h4>文章目录</h4>
+    <div class="row">
+        <div class="col-lg-6">
+            <ul class="list-unstyled">
+                {{ toc|safe }}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
+
